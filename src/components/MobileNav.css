@@ -1,0 +1,67 @@
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* Taller for better touch targets */
+    background: rgba(10, 10, 10, 0.85);
+    /* Dark semi-transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    padding-bottom: 10px;
+    /* Safe area for iPhone home bar */
+    display: none;
+    /* Hidden by default, shown on mobile via media query */
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    gap: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-nav-item svg {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mobile-nav-item.active {
+    color: #fff;
+}
+
+.mobile-nav-item.active svg {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.mobile-nav-item.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    box-shadow: 0 0 10px #fff;
+}
+
+/* Show on screens smaller than 768px (MD breakpoint) */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: flex;
+    }
+}

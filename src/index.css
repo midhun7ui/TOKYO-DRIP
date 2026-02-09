@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-display: 'Fjalla One', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --text: #f7f7f5;
+  --muted: #b6b6b6;
+  --accent: #ff8a00;
+  --hot: #ff4d00;
+  --border: rgba(255, 255, 255, 0.12);
+  --glass: rgba(10, 10, 10, 0.72);
+  --shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 138, 0, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 77, 0, 0.2), transparent 38%),
+    radial-gradient(circle at 70% 85%, rgba(255, 255, 255, 0.08), transparent 45%),
+    #0b0b0c;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
